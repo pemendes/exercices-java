@@ -10,7 +10,8 @@ public class Tp1 {
 		//exercice2();
 		//exercice3();
 		//exercice4();
-		exercice5();
+		//exercice5();
+		exercice6();
 		
 	}
 	
@@ -125,4 +126,38 @@ public class Tp1 {
 		}
 	}
 
+	private static void exercice6() {
+
+		System.out.println("Entrez un nombre : ");
+		int nombre = sc.nextInt();
+
+		int rand;
+
+		int cpt = 0;
+
+		int borneMin = 0;
+		int borneMax = 101;
+
+		do {
+
+			cpt++;
+
+			// rand = (int) (Math.random() * (borneMax - borneMin)) + borneMin;
+			rand = (borneMax - borneMin) / 2 + borneMin;
+
+			System.out.println("L'ordi a tenté : " + rand + " entre : [" + borneMin + " ; " + borneMax + "[ ");
+
+			if (nombre > rand) {
+				System.out.println("C'est trop petit");
+				borneMin = rand + 1;
+			} else if (nombre < rand) {
+				System.out.println("C'est trop grand");
+				borneMax = rand;
+			} else {
+				System.out.println("C'est trouvé " + cpt + " tentatives");
+			}
+
+		} while (nombre != rand);
+	}
 }
+
