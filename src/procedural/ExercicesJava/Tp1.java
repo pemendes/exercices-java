@@ -7,7 +7,8 @@ public class Tp1 {
 
 	public static void main(String[] args) {
 		//exercice1();
-		exercice2();
+		//exercice2();
+		exercice3();
 		
 	}
 	
@@ -40,6 +41,26 @@ public class Tp1 {
 		y = z;
 
 		System.out.println("Var 1 : " + x + " et Var 2 : " + y);
+	}
+	
+	private static void exercice3() {
+
+		System.out.print("Une année : ");
+		int annee = sc.nextInt();
+
+		// soit divisibles par 4 mais non divisibles par 100,
+		// soit divisibles par 400.
+
+		// (annee % 4 == 0 && annee % 100 != 0) || (annee % 400 == 0)
+
+		if ((annee % 4 == 0 && annee % 100 != 0) || (annee % 400 == 0)) {
+			// L’année X est bissextile
+			System.out.println("L’année " + annee + " est bissextile");
+		} else {
+			// L’année X n’est pas bissextile
+			System.out.println("L’année " + annee + " n'est pas bissextile");
+		}
+
 	}
 
 }
