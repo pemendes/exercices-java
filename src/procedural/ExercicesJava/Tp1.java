@@ -8,7 +8,8 @@ public class Tp1 {
 	public static void main(String[] args) {
 		//exercice1();
 		//exercice2();
-		exercice3();
+		//exercice3();
+		exercice4();
 		
 	}
 	
@@ -60,7 +61,40 @@ public class Tp1 {
 			// L’année X n’est pas bissextile
 			System.out.println("L’année " + annee + " n'est pas bissextile");
 		}
+	}
+	
+	private static void exercice4() {
 
+		int borneMin = 0;
+		int borneMax = 101;
+
+		int max = borneMin;
+		int min = borneMax;
+
+		int positionMin = 0;
+		int positionMax = 0;
+
+		for (int i = 0; i < 10; i++) {
+
+			int rand = (int) (Math.random() * borneMax);
+
+			System.out.println((i + 1) + " --> " + rand);
+
+			// Nouveau max ??
+			if (rand > max) {
+				max = rand;
+				positionMax = i + 1;
+			}
+
+			// Nouveau min ??
+			if (rand < min) {
+				min = rand;
+				positionMin = i + 1;
+			}
+		}
+
+		System.out.println("le max est : " + max + " position : " + positionMax);
+		System.out.println("le min est : " + min + " position : " + positionMin);
 	}
 
 }
