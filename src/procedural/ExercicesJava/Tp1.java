@@ -9,7 +9,8 @@ public class Tp1 {
 		//exercice1();
 		//exercice2();
 		//exercice3();
-		exercice4();
+		//exercice4();
+		exercice5();
 		
 	}
 	
@@ -95,6 +96,33 @@ public class Tp1 {
 
 		System.out.println("le max est : " + max + " position : " + positionMax);
 		System.out.println("le min est : " + min + " position : " + positionMin);
+	}
+	
+	private static void exercice5() {
+		int rand = (int) (Math.random() * 101);
+
+		System.out.println(rand);
+
+		boolean trouve = false;
+
+		while (!trouve) {
+
+			System.out.print("un nombre : ");
+			int nombre = sc.nextInt();
+
+			int distance = Math.abs(nombre - rand);
+
+			if (distance > 20) {
+				System.out.println("Froid !!!!");
+			} else if (distance > 5) {
+				System.out.println("Tiède !!!!");
+			} else if (distance > 0) {
+				System.out.println("Chaud !!!!");
+			} else {
+				System.out.println("Gagné");
+				trouve = true;
+			}
+		}
 	}
 
 }
